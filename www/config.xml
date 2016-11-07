@@ -30,6 +30,10 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="com.phonegap.plugins.facebookconnect" version="2.8">
+       <param name="APP_ID" value="206879683085608" />
+       <param name="APP_NAME" value="Ajuda Recife" />
+   </plugin>
     <icon src="icon.png" />
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
