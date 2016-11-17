@@ -14,10 +14,6 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.8.0">
-        <param name="APP_ID" value="786623228146069" />
-        <param name="APP_NAME" value="AppID" />
-    </gap:plugin>
     <icon src="icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
