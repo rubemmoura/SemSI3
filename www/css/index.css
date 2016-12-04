@@ -113,3 +113,52 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+#menu {
+	background-color: #1ABC9C;
+}
+
+.textoPreto {
+	color: black !important;
+	font-weight: 800;
+}
+
+.navbar-right li a {
+	background-color: #1ABC9C !important;
+	color: white !important;
+}
+
+.footer {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:50px;
+	width:100%;
+	background-color: #1ABC9C;
+}
+
+.footer p {
+	margin-top: 20px;
+}
+
+.conteudo {
+	height: 50px;
+	background-color: white;
+	margin-top: 50px;
+	min-height: 550px;
+}
+
+.texto_index{
+	color: red;
+}
+
+.img_inicio{
+	margin-top: 20px;
+}
+
+.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
