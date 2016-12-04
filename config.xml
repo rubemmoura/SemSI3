@@ -34,7 +34,7 @@
 	<param name="API_KEY_FOR_ANDROID" value=" AIzaSyCoL7BaBdg7iIrSOPq1BWMibRY5rB4ELtw" />
 	<param name="API_KEY_FOR_IOS" value="AIzaSyBBVhuj5XZXW30IjAdbozqs5N5mSWxEnDg" />
     </plugin>
-    <plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+    <plugin name="com.phonegap.plugins.facebookconnect" source="pgb" version="0.9.0">
 	<param name="APP_ID" value="206879683085608" />
         <param name="APP_NAME" value="Ajuda Recife" />
     </plugin>
