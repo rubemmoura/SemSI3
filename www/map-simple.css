@@ -1,0 +1,32 @@
+html, body {
+	height: 100%; 
+	margin: 0;
+	padding: 0; 
+}
+
+#map {
+	height: 80%;
+	width: 80%; 
+	margin: auto; 
+	padding: 60px;
+	z-index: 1;
+}
+
+#menu {
+    background-color: #1ABC9C;
+}
+
+.Titulo {
+    color: black !important;
+    font-weight: 800;
+}
+
+.navbar-default{
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:14px;
+    height:10px;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}

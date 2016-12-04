@@ -28,38 +28,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <title>Hello World</title>
-	
-	 <script>
-	
-var map;
-document.addEventListener("deviceready", function() {
-  var div = document.getElementById("map_canvas");
+   <script type="text/javascript" src="js/facebook.js"></script>
 
-  // Initialize the map view
-  map = plugin.google.maps.Map.getMap(div);
+    <title>Ajuda Recife Home</title>
 
-  // Wait until the map is ready status.
-  map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
-}, false);
-
-
-</script>
 
 	
-	  <!-- Bootstrap -->
+	  
+    <!-- formatação css do index -->
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <!-- formatação css do menu superior -->
   <script src="https://use.fontawesome.com/cea59a0963.js"></script>
 
- 
 	
 </head>
-
 <body style="background-image: url('http://refineconsulting.ca/img/background.jpg');">
+
     <!-- <div class="app">
         <h1>Hello Word</h1>
         <div id="deviceready" class="blink">
@@ -79,150 +67,39 @@ document.addEventListener("deviceready", function() {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand textoPreto" href="index.html">Ajuda, Recife!</a>
+            <a class="navbar-brand Titulo" href="index.html">Ajuda, Recife!</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="lista_projetos.html"> <i class="fa fa-list fa-fw"> </i>Lista dos projetos</a></li>
-              <li class="active"><a href="buscar_mapa.php"> <i class="fa fa-map-marker fa-fw"> </i>Buscar no Mapa</a></li>
-              <li class="active"><a href="form.html"> <i class="fa fa-plus fa-fw"> </i>Adicione um Projeto</a></li>
+              <li class="active"><a href="buscar_mapa.html"> <i class="fa fa-map-marker fa-fw"> </i>Buscar no Mapa</a></li>
+              <li class="active"><a href="form.html"> <i class="fa fa-plus fa-fw"> </i>Adicionar um Projeto</a></li>
             </ul>
           </div>
         </div>
       </div>
 	
-	<div
+	   <div
         class="fb-like"
         data-share="true"
         data-width="450"
         data-show-faces="true">
     </div>
-<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="false"></div>
 
+    <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="fb-root"></div>
+    <div id="status"></div>
 	
-    <div id="status">
-    </div>
-	
-	<button id = "getPosition">CURRENT POSITION</button>
+<button id = "getPosition">CURRENT POSITION</button>
 <button id = "watchPosition">WATCH POSITION</button>
 
-  <button id="button1">Show the map dialog</button>
  
-    <h3>PhoneGap-GoogleMaps-Plugin</h3>
-    <div style="width:100%;height:400px" id="map_canvas"></div>
-    <button id="button">Full Screen</button>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); 
-            js.id = id;
-            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1806257162979993";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '786623228146069',
-                xfbml      : true,
-                version    : 'v2.8'
-            });
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-            // This is called with the results from from FB.getLoginStatus().
-          function statusChangeCallback(response) {
-            console.log('statusChangeCallback');
-            console.log(response);
-            // The response object is returned with a status field that lets the
-            // app know the current login status of the person.
-            // Full docs on the response object can be found in the documentation
-            // for FB.getLoginStatus().
-            if (response.status === 'connected') {
-              // Logged into your app and Facebook.
-              testAPI();
-            } else if (response.status === 'not_authorized') {
-              // The person is logged into Facebook, but not your app.
-              document.getElementById('status').innerHTML = 'Please log ' +
-                'into this app.';
-            } else {
-              // The person is not logged into Facebook, so we're not sure if
-              // they are logged into this app or not.
-              document.getElementById('status').innerHTML = 'Please log ' +
-                'into Facebook.';
-            }
-          }
-
-          // This function is called when someone finishes with the Login
-          // Button.  See the onlogin handler attached to it in the sample
-          // code below.
-          function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-              statusChangeCallback(response);
-            });
-          }
-
-          window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '786623228146069',
-            cookie     : true,  // enable cookies to allow the server to access 
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.8' // use graph api version 2.8
-          });
-
-          // Now that we've initialized the JavaScript SDK, we call 
-          // FB.getLoginStatus().  This function gets the state of the
-          // person visiting this page and can return one of three states to
-          // the callback you provide.  They can be:
-          //
-          // 1. Logged into your app ('connected')
-          // 2. Logged into Facebook, but not your app ('not_authorized')
-          // 3. Not logged into Facebook and can't tell if they are logged into
-          //    your app or not.
-          //
-          // These three cases are handled in the callback function.
-
-          FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-          });
-
-          };
-
-          // Load the SDK asynchronously
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-
-          // Here we run a very simple test of the Graph API after login is
-          // successful.  See statusChangeCallback() for when this call is made.
-          function testAPI() {
-            console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function(response) {
-              console.log('Successful login for: ' + response.name);
-              document.getElementById('status').innerHTML =
-                'Thanks for logging in, ' + response.name + '!';
-            });
-          }
-    </script>
+    
 
 
 	
     <script type="text/javascript" src="js/index.js"></script>
+    
     <script type="text/javascript">
         app.initialize();
 		
@@ -239,7 +116,7 @@ document.addEventListener("deviceready", function() {
 
    function onSuccess(position) {
 
-      alert('Latitude: '          + position.coords.latitude          + '\n' +
+      alert('Latitude: '       + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
          'Altitude: '          + position.coords.altitude          + '\n' +
          'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -266,7 +143,7 @@ function watchPosition() {
 
    function onSuccess(position) {
 
-      alert('Latitude: '          + position.coords.latitude          + '\n' +
+      alert('Latitude: '       + position.coords.latitude          + '\n' +
          'Longitude: '         + position.coords.longitude         + '\n' +
          'Altitude: '          + position.coords.altitude          + '\n' +
          'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -282,6 +159,7 @@ function watchPosition() {
 
 }
     </script>
+
 </body>
 
 </html>

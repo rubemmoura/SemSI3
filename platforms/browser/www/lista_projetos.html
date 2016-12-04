@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+   
+    <title>Ajuda Recife - Lista de Projetos</title>
+	
+    <!-- compilador/intepretador jquery -->
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>	
+  <script src="https://use.fontawesome.com/cea59a0963.js"></script>
+	
+	  <!-- formatação css da lista de projetos -->
+  <link rel="stylesheet" type="text/css" href="css/lista_projetos.css">
+
+  <!-- Latest compiled and minified CSS bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-image: url('http://refineconsulting.ca/img/background.jpg');">
+       
+	
+      <div class="navbar navbar-default" role="navigation" id="menu">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand Titulo" href="index.html">Ajuda, Recife!</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="lista_projetos.html"> <i class="fa fa-list fa-fw"> </i>Lista dos projetos</a></li>
+              <li class="active"><a href="buscar_mapa.php"> <i class="fa fa-map-marker fa-fw"> </i>Buscar no Mapa</a></li>
+              <li class="active"><a href="form.html"> <i class="fa fa-plus fa-fw"> </i>Adicionar um Projeto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+	 <div
+        class="fb-like"
+        data-share="true"
+        data-width="450"
+        data-show-faces="true">
+    </div>
+	<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="false"></div>
+	<div id="fb-root"></div>
+    <div id="status"></div>
+	
+	<div class="bd-example" data-example-id="">
+	
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+
+  <div class="container">
+  
+    <div class="row">
+      <!-- Carousel -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+			    <div class="item active">
+			    	<img src="http://placehold.it/600x460" alt="First slide">
+			    </div>
+			    <div class="item">
+			    	<img src="http://placehold.it/600x460" alt="Second slide">
+			    </div>
+			    <div class="item">
+			    	<img src="http://placehold.it/600x460" alt="Third slide">
+			    	<!-- Static Header -->
+                    <div class="header-text hidden-xs">
+                        <div class="col-md-12 text-center">
+                            <h2>
+                                <span>NOM DU PROJET</span>
+                            </h2>
+                            <br>
+                            <h3>
+                            	<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                            </h3>
+                            <br>
+                            <div class="">
+                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Vous en voulez un pareil ?</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Estimation gratuit!</a></div>
+                        </div>
+                    </div><!-- /header-text -->
+			    </div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div><!-- /carousel -->
+    </div>
+  </div>
+</div>
+
+<div class="container liste_projets" >
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <a href="#" data-toggle="modal" data-target="#myModal"><img src="http://placehold.it/300x230" alt=""></a>
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+	</div>
+    <div class="row">
+    	<div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+	</div>
+    <div class="row">
+    	<div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://placehold.it/300x230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://www.mundovipbahia.com.br/wp-content/uploads/MAXE_-_PROJETO_SOCIAL_DM.jpg" width="300" height="230" alt="">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6 projet">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">                    
+                    <img src="http://www.superlutas.com.br/wp-content/uploads/2012/08/Massaranduba_projeto-social.jpg" alt="" width="300" height="230">
+                </div>
+                <div class="panel-footer">Conhecer Projeto</div>
+            </div>
+        </div>
+	</div>
+    	
+ <script>
+		$(function(){
+$('.panel').hover(function(){
+        $(this).find('.panel-footer').slideDown(250);
+    },function(){
+        $(this).find('.panel-footer').slideUp(250); //.fadeOut(205)
+    });
+})
+</script>
+
+	<script type="text/javascript" src="js/lista_projetos.js"></script>
+	
+	<script type="text/javascript" src="js/facebook.js"></script>
+ 
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
