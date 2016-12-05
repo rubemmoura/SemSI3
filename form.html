@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Cadastro de Projetos</title>
+	  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://use.fontawesome.com/cea59a0963.js"></script>
+
+
+	
+</head>
+<body style="background-image: url('https://lituraterre.files.wordpress.com/2011/09/recife.jpg');">
+
+      <div class="navbar navbar-default" role="navigation" id="menu">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand Titulo" href="index.html">Ajuda, Recife!</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="lista_projetos.html"> <i class="fa fa-list fa-fw"> </i>Lista dos projetos</a></li>
+              <li class="active"><a href="buscar_mapa.html"> <i class="fa fa-map-marker fa-fw"> </i>Buscar no Mapa</a></li>
+              <li class="active"><a href="form.html"> <i class="fa fa-plus fa-fw"> </i>Adicionar um Projeto</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+		
+
+
+    <div class="col-md-6 col-md-offset-3" style="padding: 10px; background-color: #E7E7E7; border-radius: 4px; box-shadow: 0px 0px 8px #777">
+			<form>
+        <legend>Informações do projeto</legend>
+			  <div class="form-group">
+				  <label for="nomeprojeto">Nome  do projeto</label>
+				  <input type="text" class="form-control" id="nomeprojeto" placeholder="Informe o nome do projeto">
+			  </div>
+			  <div class="form-group">
+				  <label for="oquefaz">O que faz?</label>
+				  <textarea class="form-control" id="oquefaz" placeholder="O que o projeto faz?"></textarea>
+			  </div>
+			  <div class="form-group">
+				  <label for="ondeajuda">Onde ajuda?</label>
+  				<div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input type="text" class="form-control" id="latitude" placeholder="Informe a Latitude.">
+          </div>
+          <div class="form-group">
+            <label for="longitude">Longitude</label>
+            <input type="text" class="form-control" id="longitude" placeholder="Informe a Longitude">
+          </div>
+			  </div>
+			  <div class="form-group">
+				  <label for="doar">O que precisa para doar?</label>
+				  <input type="text" class="form-control" id="doar" placeholder="O que o projeto precisa para doar?">
+			  </div>
+        <div class="form-group">
+          <label for="doar">O que precisa para doar?</label>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Alimentos
+            </label>
+            <label>
+              <input type="checkbox"> Dinheiro
+            </label>
+            <label>  
+              <input type="checkbox"> Roupas
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="doar">Outros</label>
+            <input type="text" class="form-control" id="doar" placeholder="Outros..">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="foto">Url da Foto:</label>
+          <input type="text" id="foto">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="text" class="form-control" id="telefone" placeholder="Informe o Telefone">
+        </div>
+        <legend>Contato</legend>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Insira seu nome">
+        </div>
+			  
+			</form>
+      <button onclick="addMarker()" class="btn btn-block btn-success" style="">Cadastrar</button>
+		</div>
+
+
+ 
+
+<script type="text/javascript" src="map-simple.js"></script>
+<script type="text/javascript" src="form.js"></script>
+
+</body>
+
+</html>
